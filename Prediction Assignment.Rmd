@@ -2,11 +2,15 @@
 title: "Prediction Assignment Writeup"
 author: "Milton Candela"
 date: "1/14/2021"
-output: html_document
+output:
+  github_document:
+    fig_width: 15
+    fig_height: 10
+    dev: jpeg
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, fig.width = 15, fig.height = 10)
+knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
 library(randomForest)
 library(caret)
