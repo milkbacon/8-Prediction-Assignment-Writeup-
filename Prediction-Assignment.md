@@ -186,7 +186,7 @@ model1 <- rpart(classe ~ ., data = training_acc_Tot, na.action = na.omit)
 fancyRpartPlot(model1, main = 'Rpart visualization of Model 1', sub = '')
 ```
 
-![](Prediction-Assignment_files/figure-gfm/model1-1.jpeg)<!-- -->
+![](Prediction-Assignment_files/figure-gfm/model1-1.png)<!-- -->
 
 ``` r
 mod1Pred <- predict(model1, testing, type = 'class')
@@ -203,7 +203,7 @@ model2 <- rpart(classe ~ ., data = training_acc_xyz, na.action = na.omit)
 fancyRpartPlot(model2, main = 'Rpart visualization of Model 2', sub = '')
 ```
 
-![](Prediction-Assignment_files/figure-gfm/model2-1.jpeg)<!-- -->
+![](Prediction-Assignment_files/figure-gfm/model2-1.png)<!-- -->
 
 ``` r
 mod2Pred <- predict(model2, testing, type = 'class')
@@ -371,7 +371,7 @@ levelplot(conf_centage, col.regions = terrain.colors(100), xlab = 'Actual Class'
           main = 'Heatmap made by the confusion matrix of the final predictive model')
 ```
 
-![](Prediction-Assignment_files/figure-gfm/heatmap-1.jpeg)<!-- -->
+![](Prediction-Assignment_files/figure-gfm/heatmap-1.png)<!-- -->
 
 Finally, we will take a look at the plot that the *randomForest* object
 generates, this will be a graph that represents the quantity of error
@@ -381,7 +381,7 @@ with respect to the number of trees generates in each iteration.
 plot(modelFinal, main = 'Final Model Plot')
 ```
 
-![](Prediction-Assignment_files/figure-gfm/treeplot-1.jpeg)<!-- -->
+![](Prediction-Assignment_files/figure-gfm/treeplot-1.png)<!-- -->
 
 As it can be seen, the error drops below 10% when, approximately, 50
 tress are generated, maybe that is the reason why the *rpart* method

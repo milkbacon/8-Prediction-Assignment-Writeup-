@@ -3,10 +3,9 @@ title: "Prediction Assignment Writeup"
 author: "Milton Candela"
 date: "1/14/2021"
 output:
-  github_document:
+  html_document:
     fig_width: 15
     fig_height: 10
-    dev: jpeg
 ---
 
 ```{r setup, include=FALSE}
@@ -89,7 +88,8 @@ From these features, two main datasets will be created:
 
 ```{r}
 for (feature in grep('var_accel',colnames(training), value = TRUE)) {
-       print(paste('Percent of NA from the feature', feature, ' ', (sum(is.na(training[,feature])))/(length(training[,feature])) * 100))
+       print(paste('Percent of NA from the feature', feature, ': ',
+                   (sum(is.na(training[,feature])))/(length(training[,feature])) * 100, '%'))
 }
 ```
 
